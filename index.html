@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venia category page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/wwp5vjv.css" />
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="mobile-menu">
+        <nav class="navbar">
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <div class="logo">
+            <img src="/images/VeniaLogo.svg" width="102" alt="venialLogo" />
+          </div>
+          <div class="cart" aria-label="shoppingCart icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-icon-Dp3"
+            >
+              <title id="shoppingCart">shopping cart</title>
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+          </div>
+        </nav>
+
+        <div class="sidebar" id="sidebar">
+          <div class="top-head">
+            <h2>Filters</h2>
+            <span class="close-btn" id="closeBtn">&times;</span>
+          </div>
+
+          <div id="mob-filter" class="mob-filter">
+            <div id="clear" class="clear">Clear all</div>
+            <aside class="filter-slot">
+              <div class="filter">
+                <label for="categoryFilter">Categories</label>
+                <div class="filter" id="categoryFilter"></div>
+              </div>
+              <!-- Price range filter -->
+              <div class="price-range">
+                <h3>Filter by Price</h3>
+                <input
+                  type="range"
+                  class="applyPriceRange"
+                  min="0"
+                  value="100"
+                  step="1"
+                />
+                <p class="price-range-display">0 - $100</p>
+              </div>
+              <div class="text-center">
+                <button id="searchbutton" class="btn btn-primary search result">
+                  SEE 0 RESULTS
+                </button>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="overlay" id="overlay"></div>
+      </div>
+      <div class="row header-wrapper add-flex align-center">
+        <div class="logo">
+          <img src="./images/VeniaLogo.svg" alt="venialLogo" width="78" />
+        </div>
+        <div class="menu">
+          <ul class="add-flex gap-3" aria-label="Navigation menu">
+            <li><a href="#" class="active menu-item">Home</a></li>
+            <li><a href="#" class="menu-item">Women</a></li>
+            <li><a href="#" class="menu-item">Men</a></li>
+            <li><a href="#" class="menu-item">Smart Gear</a></li>
+            <li><a href="#" class="menu-item">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="cart" aria-label="shoppingCart icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon-icon-Dp3"
+          >
+            <title id="shoppingCartsvg">shopping cart</title>
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="vania-banner-wrap">
+        <div class="desc add-flex align-center justify-center text-center">
+          <h1>Men's <br />Outerwear</h1>
+        </div>
+        <div class="banner-img"></div>
+      </div>
+      <div class="top-section row add-flex align-center">
+        <div class="breadcrums">
+          <a href="#">Clothing</a> <span>/</span> <a href="#">Women's</a>
+          <span>/</span>
+          <span class="current">Outerwear</span>
+        </div>
+        <div class="add-flex align-center filter-top">
+          <div id="searchresult">0 Results</div>
+          <input
+            type="text"
+            id="searchinput"
+            placeholder="Search by products name..."
+          />
+
+          <div class="mobile-sort">
+            <ul>
+              <li>
+                <p class="filter-result add-flex align-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                  >
+                    <g id="sliders" transform="translate(0 -2)">
+                      <line
+                        id="Line_563"
+                        data-name="Line 563"
+                        y1="6"
+                        transform="translate(3 13)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_564"
+                        data-name="Line 564"
+                        y1="6"
+                        transform="translate(3 3)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_565"
+                        data-name="Line 565"
+                        y1="8"
+                        transform="translate(9 11)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_566"
+                        data-name="Line 566"
+                        y1="4"
+                        transform="translate(9 3)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_567"
+                        data-name="Line 567"
+                        y1="4"
+                        transform="translate(15 15)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_568"
+                        data-name="Line 568"
+                        y1="8"
+                        transform="translate(15 3)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_569"
+                        data-name="Line 569"
+                        x2="4"
+                        transform="translate(1 12.778)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_570"
+                        data-name="Line 570"
+                        x2="4"
+                        transform="translate(7 7.444)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <line
+                        id="Line_571"
+                        data-name="Line 571"
+                        x2="4"
+                        transform="translate(13 14.556)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                  Filter Result
+                </p>
+              </li>
+              <li>
+                <p class="sort-filter">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10.802"
+                    height="15.287"
+                    viewBox="0 0 10.802 15.287"
+                    class="high"
+                  >
+                    <g id="arrow-up" transform="translate(1.8 1)">
+                      <path
+                        id="Path_38196"
+                        data-name="Path 38196"
+                        d="M0,13V0"
+                        transform="translate(3.601 0.287)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        id="Path_37884"
+                        data-name="Path 37884"
+                        d="M5,10.287,9,5l4,5.287"
+                        transform="translate(-5.399 -5)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10.802"
+                    height="15.287"
+                    viewBox="0 0 10.802 15.287"
+                    class="low"
+                  >
+                    <g id="arrow-down" transform="translate(1.401)">
+                      <path
+                        id="Path_38195"
+                        data-name="Path 38195"
+                        d="M0,1V14"
+                        transform="translate(4)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        id="Path_37884"
+                        data-name="Path 37884"
+                        d="M5,5l4,5.287L13,5"
+                        transform="translate(-5 4)"
+                        fill="none"
+                        stroke="#172026"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+
+                  Sort Products
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="filter">
+            <select id="sortSelect">
+              <option value="" selected hidden>Sort by Price</option>
+              <option value="asc">Low to High</option>
+              <option value="desc">High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <section class="category-section row">
+        <aside class="filter-slot">
+          <div class="filter">
+            <label for="desCategoryFilter">Categories</label>
+            <div class="filter" id="desCategoryFilter"></div>
+          </div>
+          <!-- Price range filter -->
+          <div class="price-range">
+            <h3>Filter by Price</h3>
+            <input
+              type="range"
+              class="applyPriceRange"
+              min="0"
+              value="100"
+              step="1"
+            />
+            <p class="price-range-display">0 - $100</p>
+          </div>
+        </aside>
+        <div class="product-list-wrapper">
+          <ul class="product-list">
+            <!-- Dynamically inserting the products -->
+          </ul>
+          <div id="shimmer" class="shimmer" style="display: none">
+            Loading...
+          </div>
+          <div class="pagination text-center">
+            <ul>
+              <!-- Pagination items will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-links">
+          <ul class="add-flex row flex-1" aria-label="Navigation footer menu">
+            <li>
+              <h5>Account</h5>
+              <ul>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Order Status</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5>About Us</h5>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5>Help</h5>
+              <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Returns</a></li>
+              </ul>
+            </li>
+            <li>
+              <h5>Follow Us!</h5>
+              <ul>
+                <li>
+                  <a href="#"
+                    >Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore.</a
+                  >
+                </li>
+
+                <li>
+                  <ul
+                    class="add-flex align-center social-icons"
+                    aria-label="social-icons"
+                  >
+                    <li>
+                      <a href="#"
+                        ><img src="./images/instagram.svg" alt="instagram"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./images/facebook.svg" alt="facebook"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><img src="./images/twitter.svg" alt="twitter"
+                      /></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul class="row add-flex footer-end-wrapper">
+          <li>
+            <img src="./images/VeniaLogoF.svg" width="102" alt="venialLogo" />
+          </li>
+          <li class="flex-1 text-center">
+            © Company Name Address Ave, City Name, State ZIP
+          </li>
+          <li class="font-small add-flex footer-end-link">
+            <a href="#">Terms of Use</a><a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
